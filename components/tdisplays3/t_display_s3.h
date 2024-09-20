@@ -11,9 +11,9 @@ namespace esphome {
 namespace tdisplays3 {
 
 #if ESPHOME_VERSION_CODE >= VERSION_CODE(2023, 12, 0)
-class TDisplayS3 : public display::DisplayBuffer {
-#else
 class TDisplayS3 : public PollingComponent, public display::DisplayBuffer {
+#else
+class TDisplayS3 : public PollingComponent, public display::Display {
 #endif  // VERSION_CODE(2023, 12, 0)
  public:
   void dump_config() override;
